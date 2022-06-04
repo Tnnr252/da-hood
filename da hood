@@ -1,4 +1,3 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/MrKix/nullptrpsx/main/psxloadstring.lua"))()
 repeat wait() until game:IsLoaded() and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Humanoid")
 if getgenv().ExecutedAlt == true then
 	return 
