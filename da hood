@@ -931,7 +931,7 @@ if Player then
 
 					print(Chat.."Player chatted ran through")
 
-					if Chat:match(".bring") and Chat ~= ".bring" and getgenv().PointInTable == 1 and not IsLocking then
+					if Chat:match(".bring ") and getgenv().PointInTable == 1 and not IsLocking then
 						print("Matched")
 						for i,Targ in pairs(game.Players:GetPlayers()) do 
 							if not IsLocking and Targ ~= game.Players.LocalPlayer then
@@ -1140,7 +1140,7 @@ if Player then
 						CurrAnim = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
 						CurrAnim:Play()
 						CurrAnim:AdjustSpeed()
-					elseif Chat == ".airlock" then
+					elseif Chat == ".hover" then
 
 						game.Players.LocalPlayer.Character:WaitForChild("Animate").Disabled = true
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*CFrame.new(0,10,0)
@@ -1154,7 +1154,7 @@ if Player then
 						Load = game.Players.LocalPlayer.Character.Humanoid.Animator:LoadAnimation(Anim)
 						Load.Looped = true
 						Load:Play()
-					elseif Chat == ".stop air" then
+					elseif Chat == ".stop hover" then
 						for i,v in pairs(game.Players.LocalPlayer.Character.HumanoidRootPart:GetChildren()) do
 							if v:IsA("BodyPosition") then
 								v:Destroy()
